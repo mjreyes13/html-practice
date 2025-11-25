@@ -1,11 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charsheet=""UTF-8>
+    <meta charshet=""UTF-8>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Lab</title>
     <style>
         /*Part 2 CSS should all be within this tag */
+        .h1{
+        background-color: transparent;
+        font-size: 35px;
+        text-align: center;
+        color: dimgray;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        nav li {
+            list-style: none;
+        }
+
+        nav li a {
+            text-decoration: none;
+            font-weight: bold;
+            font-family: "Courier New";
+            color: #003366;
+            padding: 8px 14px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        nav li a:hover {
+            background-color: #003366;
+            color: white;
+        }
+
+        body {
+            background-color: #f7f4ec;
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            background-color: #ffffff;
+            padding: 15px;
+            margin-bottom: 25px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        div.gallery-item img {
+            width: 300px;
+            display: block;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+
+        section {
+            border-left: 5px solid #003366;
+            padding-left: 15px;
+            margin-bottom: 40px;
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 25% auto;
+            column-gap: 20px;
+            align-items: flex-start;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3 , 1fr);
+            gap: 20px;
+        }
+
     </style>
 </head>
 <body>
@@ -13,15 +87,19 @@
     <h1> Majo's recommedations</h1>
    
 <!-- Part 1 Content should all be within the body-->
+<div class="main-grid">
+    <nav class="menu">
+        <ul>
+            <li><a href="#Landscapes">Landscapes</a></li>
+            <li><a href="#Women">Women</a></li>
+            <li><a href="#Original">Original Art</a></li>
+        </ul>
+    </nav>
+</header>
 
-<nav class="menu">
-    <ul>
-        <li><a href="#Landscapes">Landscapes</a></li>
-        <li><a href="#Women">Women</a></li>
-        <li><a href="#Original">Original Art</a></li>
-    </ul>
-</nav>
 <main>
+    <!-- Landscapes Section-->
+     <section id="Landscapes">
     <h2>Landscapes</h2>
     <div class="gallery-item">
         <img
@@ -52,6 +130,7 @@
             of a horizontal surface on a vertical one.
         </p>
     </div>
+
     <div class="gallery-item">
         <img
         src="images/View of Delphi with a Procession.jpg"
@@ -61,17 +140,18 @@
           Delphi
         </a>
         <p>
-        Claude Lorrain (Claude Gellée; French, 1600-1682).
-        This painting of the ancient city of Delphi (in what is now Greece)
-        presents a delicate rendering of the glowing Mediterranean atmosphere.
-        Like many other foreign artists drawn to the ruins of antiquity,
-        French painter Claude Lorrain was fascinated with the ancient
-        Roman Empire. Here, he evoked a serene, bucolic world akin to the 
-        poetic vision of the ancient Roman writer Virgil, depicting the ruins
-        restored to their original glory as Claude imagined. 
-        This painting was commissioned by Cardinal Carlo Camillo Massimi,
-        an important and erudite collector in Rome.
+            Claude Lorrain (Claude Gellée; French, 1600-1682).
+            This painting of the ancient city of Delphi (in what is now Greece)
+            presents a delicate rendering of the glowing Mediterranean atmosphere.
+            Like many other foreign artists drawn to the ruins of antiquity,
+            French painter Claude Lorrain was fascinated with the ancient
+            Roman Empire. Here, he evoked a serene, bucolic world akin to the 
+            poetic vision of the ancient Roman writer Virgil, depicting the ruins
+            restored to their original glory as Claude imagined. 
+            This painting was commissioned by Cardinal Carlo Camillo Massimi,
+            an important and erudite collector in Rome.
         </p>
+    </div>
 
     <div class="gallery-item">
         <img
@@ -82,20 +162,21 @@
           Cotopaxi
         </a>
         <p>
-        Frederic Edwin Church (American, 1826–1900)
-        View of Cotopaxi brings together in visual form scientific,
-        religious, political, and cultural ideas in the mid-19th century.
-        Inspired by German naturalist Alexander von Humboldt’s concept
-        of ecological interconnectedness, Frederic Edwin Church traveled
-        to South America to meticulously study the tropical landscape.
-        The artist produced at least ten finished paintings of the
-        Ecuadorian volcano, this one completed in his studio just before
-        his second visit to the region. For Church and other Christian viewers,
-        nature, with all its creative and destructive wonders,
-        was evidence of divine power. The painting likewise reflected an
-        imperialist vision, as US government officials eyed Latin America
-        as a site for territorial expansion and conquest.
+            Frederic Edwin Church (American, 1826–1900)
+            View of Cotopaxi brings together in visual form scientific,
+            religious, political, and cultural ideas in the mid-19th century.
+            Inspired by German naturalist Alexander von Humboldt’s concept
+            of ecological interconnectedness, Frederic Edwin Church traveled
+            to South America to meticulously study the tropical landscape.
+            The artist produced at least ten finished paintings of the
+            Ecuadorian volcano, this one completed in his studio just before
+            his second visit to the region. For Church and other Christian viewers,
+            nature, with all its creative and destructive wonders,
+            was evidence of divine power. The painting likewise reflected an
+            imperialist vision, as US government officials eyed Latin America
+            as a site for territorial expansion and conquest.
         </p>
+    </div>
 
     <div class="gallery-item">
         <img
@@ -106,31 +187,32 @@
           Palm House
         </a>
         <p>
-        Carl Blechen (German, 1798–1840)
-        Lush palms and overgrown greenery dominate this view of
-        the Palm House, designed by Karl Friedrich Schinkel to
-        display the Prussian royals’ collection of tropical plants.
-        This painting plays with the boundaries between architecture
-        and nature, imagination and reality: vines curl around soaring
-        columns and bowed fronds evoke archways. Carl Blechen populated
-        his dazzling place-portrait with a leisure scene derived from
-        colonialist fantasies of non-European women. 
-        The artist dressed the ﬁgures in rich textiles that echo
-        the building’s colors and motifs, as if he considered them an
-        extension of the decor.
+            Carl Blechen (German, 1798–1840)
+            Lush palms and overgrown greenery dominate this view of
+            the Palm House, designed by Karl Friedrich Schinkel to
+            display the Prussian royals’ collection of tropical plants.
+            This painting plays with the boundaries between architecture
+            and nature, imagination and reality: vines curl around soaring
+            columns and bowed fronds evoke archways. Carl Blechen populated
+            his dazzling place-portrait with a leisure scene derived from
+            colonialist fantasies of non-European women. 
+            The artist dressed the ﬁgures in rich textiles that echo
+            the building’s colors and motifs, as if he considered them an
+            extension of the decor.
 
-        The short career of Carl Blechen, a pivotal ﬁgure in
-        nineteenth-century German painting, marked the transition
-        from Romanticism to a more realistic view of nature.
-        Inspired in part by his encounter with the Italian landscape
-        and light during a trip he made around 1828 or 1829,
-        Blechen developed a ﬂuid technique that enabled him to
-        capture ﬂeeting atmospheric effects. He often used his
-        landscapes as settings for mysterious ﬁgures, reﬂecting
-        his early contact with Romantic painting and theater.
+            The short career of Carl Blechen, a pivotal ﬁgure in
+            nineteenth-century German painting, marked the transition
+            from Romanticism to a more realistic view of nature.
+            Inspired in part by his encounter with the Italian landscape
+            and light during a trip he made around 1828 or 1829,
+            Blechen developed a ﬂuid technique that enabled him to
+            capture ﬂeeting atmospheric effects. He often used his
+            landscapes as settings for mysterious ﬁgures, reﬂecting
+            his early contact with Romantic painting and theater.
         </p>
-
-        <div class="gallery-item">
+    </div>
+       
+    <div class="gallery-item">
         <img
         src="images/The Emperor Sailing, from The Story of the Emperor....jpg"
         alt="Emperor Sailing" />
@@ -139,27 +221,28 @@
           Emperor Sailing
         </a>
         <p>
-        After a design by Guy-Louis Vernansal (French, 1648–1729) and others
-        Woven at the Manufacture Royale de Beauvais under the direction of
-        Pierre and Etienne Filleul (codirectors, 1711–22) France, Beauvais
+            After a design by Guy-Louis Vernansal (French, 1648–1729) and others
+            Woven at the Manufacture Royale de Beauvais under the direction of
+            Pierre and Etienne Filleul (codirectors, 1711–22) France, Beauvais
 
-        This tapestry is part of a suite that portrays scenes from the lives
-        of the Chinese emperor Shunzhi (r. 1644–61) and his son,
-        the emperor Kangxi (r. 1661–1722). 
-        The Emperor Sailing shows the elder emperor seated in a ceremonial
-        dragon boat as it pulls away from a quay. Members of the imperial 
-        family and their attendants watch the launch from underneath an 
-        arcade, in close proximity to a crane and a tortoise that together 
-        symbolize their well-wishes for the monarch. 
-        Philippe Behagle, then director of the Beauvais tapestry workshop, 
-        commissioned the design of this tapestry suite in the mid-1680s to 
-        cater to the French court’s increasing fascinating with China. 
-        As an allegory of good governance, the series makes manifest the 
-        parallels, first propounded by French Jesuit missionaries in China, 
-        between Louis XIV and Kangxi.
+            This tapestry is part of a suite that portrays scenes from the lives
+            of the Chinese emperor Shunzhi (r. 1644–61) and his son,
+            the emperor Kangxi (r. 1661–1722). 
+            The Emperor Sailing shows the elder emperor seated in a ceremonial
+            dragon boat as it pulls away from a quay. Members of the imperial 
+            family and their attendants watch the launch from underneath an 
+            arcade, in close proximity to a crane and a tortoise that together 
+            symbolize their well-wishes for the monarch. 
+            Philippe Behagle, then director of the Beauvais tapestry workshop, 
+            commissioned the design of this tapestry suite in the mid-1680s to 
+            cater to the French court’s increasing fascinating with China. 
+            As an allegory of good governance, the series makes manifest the 
+            parallels, first propounded by French Jesuit missionaries in China, 
+            between Louis XIV and Kangxi.
         </p>
+    </div>
 
-        <div class="gallery-item">
+    <div class="gallery-item">
         <img
         src="images/Icebound.jpg"
         alt="Icebound" />
@@ -168,20 +251,25 @@
           Icebound
         </a>
         <p>
-        John Henry Twachtman (American, 1853–1902)
-        During the last decade of his life, John Henry Twachtman frequently
-        painted views of the landscape surrounding his home in Greenwich,
-        Connecticut. In a departure from typically barren images of winter,
-        he enjoyed depicting the beauty of the frozen terrain, believing that it 
-        was conducive to contemplation and regeneration. 
-        The dense layers of paint in Icebound mimic the accumulation of snow
-        on frozen ground, and the sinuous curves that define the snow and ice
-        against the water suggest movement in an otherwise tranquil environment.
-        Almost square in format, the painting’s harmonious composition exemplifies
-        Twachtman’s opinion that “never is nature more lovely than when it is snowing.”
+            John Henry Twachtman (American, 1853–1902)
+            During the last decade of his life, John Henry Twachtman frequently
+            painted views of the landscape surrounding his home in Greenwich,
+            Connecticut. In a departure from typically barren images of winter,
+            he enjoyed depicting the beauty of the frozen terrain, believing that it 
+            was conducive to contemplation and regeneration. 
+            The dense layers of paint in Icebound mimic the accumulation of snow
+            on frozen ground, and the sinuous curves that define the snow and ice
+            against the water suggest movement in an otherwise tranquil environment.
+            Almost square in format, the painting’s harmonious composition exemplifies
+            Twachtman’s opinion that “never is nature more lovely than when it is snowing.”
         </p>
+    </div>
+    </section>
 
+    <!-- Women's Section-->
+    <section id="Women">
     <h2>Women</h2>
+
     <div class="gallery-item">
         <img
         src="images/Acrobats at the Cirque Fernando (Francisca and....jpg"
@@ -193,8 +281,9 @@
         <p>
             Pierre-Auguste Renoir (French, 1841–1919)
         </p>
+    </div>
 
-        <div class="gallery-item">
+    <div class="gallery-item">
         <img
         src="images/Ballet at the Paris Opéra.jpg"
         alt="Ballet" />
@@ -203,11 +292,11 @@
           Ballet at the Paris Opera
         </a>
         <p>
-        Edgar Degas
-        French, 1834-1917
+            Edgar Degas (French, 1834-1917)
         </p>
+    </div>
 
-        <div class="gallery-item">
+    <div class="gallery-item">
         <img
         src="images/Isabella Wolff.jpg"
         alt="Isabella Wolff" />
@@ -216,10 +305,11 @@
           Isabella Wolff
         </a>
         <p>
-        Sir Thomas Lawrence (English, 1769-1830)
+            Sir Thomas Lawrence (English, 1769-1830)
         </p>
+    </div>
 
-        <div class="gallery-item">
+    <div class="gallery-item">
         <img
         src="images/Two Sisters (On the Terrace).jpg"
         alt="Two Sisters" />
@@ -228,13 +318,28 @@
           Two Sisters
         </a>
         <p>
-        Pierre-Auguste Renoir (French, 1841–1919)
+            Pierre-Auguste Renoir (French, 1841–1919)
         </p>
+    </div>
+    </section id="Original">
         <h2>Original Work</h2>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <svg 
+                viewBox="0 0 300 300" 
+                xmlns="http://www.w3.org/2000/svg">
+                <!-- your SVG will go here -->
+                <circle cx="50" cy="50" r="50" />
+                <polyline points="100,100 150,25 150,75 200,0" fill="none" stroke="black" />
+
+    </svg>
+        </div>
 
 
         
 
 </main>
+</div>
 </body>
 </html>
